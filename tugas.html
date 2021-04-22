@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>tugas</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
+        <style>
+            body {
+                background: url(iyaa.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            div.a {
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <div class="a"> <h1>BIODATA</h1></div>
+<div>
+<div id="app">
+       <label for="name">Nama Lengkap :</label>
+        <input type="text" v-model="name">
+    <br><br>
+        <label for="tanggal lahir">Tanggal Lahir :</label>
+        <input type="varchar" v-model="tanggal">
+    <br><br>
+        <label for="agama">Agama :</label>
+        <input type="radio" v-model="lesson" value="Islam">Islam
+        <input type="radio" v-model="lesson" value="Kristen">Kristen
+        <input type="radio" v-model="lesson" value="Budha">Budha
+        <input type="radio" v-model="lesson" value="Katolik">Katolik
+    <br>
+        <label for="hoby">Hoby :</label>
+        <input type="checkbox" v-model="hoby" value="Membaca">Membaca
+        <input type="checkbox" v-model="hoby" value="Menyanyi">Menyanyi
+        <input type="checkbox" v-model="hoby" value="Memasak">Memasak
+        <input type="checkbox" v-model="hoby" value="Berenang">Berenang
+    <br>
+        <span>Alamat :</span>
+        <p style="white-space: pre-line;"></p>
+        <textarea v-model="message" placeholder="alamat"></textarea>
+    <br>
+        <div id="app"></div>
+        <label for="sekolah">Sekolah</label>
+        <select v-model="selected">
+            <option disabled value="">Pilih</option>
+            <option>SMK</option>
+            <option>SMA</option>
+        </select>
+        <p><h1>Biodata Diri :</h1></p>
+        <p>{{ name }}</p>
+        <p>{{ tanggal }}</p>
+        <p>{{ lesson }}</p>
+        <p>{{ hoby }}</p>
+        <p>{{ message }}</p>
+        <span>{{ selected }}</span>
+
+<script>
+       var vo = new Vue({
+            el : '#app',      
+            data: {
+                lesson : [],
+                hoby : [],
+            },
+        });
+
+        </script>
+    </body>
+</html>
